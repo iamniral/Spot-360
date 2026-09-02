@@ -5,5 +5,6 @@ ${Cookies}             xpath://button[contains(text(), 'Accept') or contains(tex
 ${UserNameTextField}                 //*[@placeholder="Username"]
 ${PasswordTextField}                 //*[@placeholder="Password"]
 ${LoginButton}                       //*[@id="top-element"]/div/main/app-login/div/div[3]/div[1]/form/div[2]/spotma-button/button
-${Mydevices}    //span[contains(@class,"active") and normalize-space(.)="MY DEVICES"]
-${Addnewspotdevice}      //span[@tabindex="0" and contains(@class,"active")]
+${Mydevices}                         //span[text()=" MY DEVICES "]  #/html/body/app-component/div/div/app-root-header/header/nav/ul/li[2]
+${Addnewspotdevice}                  //a[text()=" Add New SPOT Device"]  #//*[@id="nav-add-new-device"]
+${ESN/UIDTextField}                  //*[@id="47369c81-de10-4329-a150-bad01e84483d"]
