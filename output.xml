@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-09-08T13:07:53.955394" rpa="false" schemaversion="5">
+<suite id="s1" name="03 Message Tab" source="D:\SpotAutomation\tests\03_Message_Tab.robot">
+<test id="s1-t1" name="Testcase-001:Verify Successful Add new contact" line="14">
+<kw name="Login to Application">
+<msg time="2026-09-08T13:07:54.364088" level="FAIL">No keyword with name 'Login to Application' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</msg>
+<arg>Testapp025a6</arg>
+<arg>Test@123</arg>
+<status status="FAIL" start="2026-09-08T13:07:54.364045" elapsed="0.000097">No keyword with name 'Login to Application' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<status status="FAIL" start="2026-09-08T13:07:54.362152" elapsed="0.002370">No keyword with name 'Login to Application' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
+</test>
+<doc>Automating Mobile App Login Scenarios</doc>
+<status status="FAIL" start="2026-09-08T13:07:53.957843" elapsed="0.407388"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="03 Message Tab" id="s1" pass="0" fail="1" skip="0">03 Message Tab</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.6 on win32)" generated="2026-09-08T17:15:59.701449" rpa="false" schemaversion="5">
+<suite id="s1" name="SpotAutomation" source="D:\SpotAutomation">
+<suite id="s1-s1" name="Tests" source="D:\SpotAutomation\tests">
+<suite id="s1-s1-s1" name="03 Message Tab" source="D:\SpotAutomation\tests\03_Message_Tab.robot">
+<test id="s1-s1-s1-t1" name="Testcase-001:Verify send message to new contact" line="16">
+<kw name="Login to Application" owner="keywords">
+<kw name="Start Mobile Application" owner="appium_configs">
+<kw name="Open Application" owner="AppiumLibrary">
+<msg time="2026-09-08T17:16:04.220091" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /session</msg>
+<msg time="2026-09-08T17:16:06.239832" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /session</msg>
+<msg time="2026-09-08T17:16:08.270533" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /session</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-09-08T17:16:10.288345" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-09-08T17:16:10.287873" elapsed="0.135650">No application is open</status>
+</kw>
+<msg time="2026-09-08T17:16:10.423827" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-09-08T17:16:10.432637" level="FAIL">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</msg>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="FAIL" start="2026-09-08T17:16:02.144056" elapsed="8.308105">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</kw>
+<status status="FAIL" start="2026-09-08T17:16:02.143250" elapsed="8.309190">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="android:id/`input_field_username`"]</arg>
+<doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.452606" elapsed="0.000180"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="android:id/`input_field_username`"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.452922" elapsed="0.000129"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id="android:id/`input_field_password`"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.453176" elapsed="0.000119"/>
+</kw>
+<kw name="Hide Keyboard" owner="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout[2]</arg>
+<doc>Hides the software keyboard on the device if it is currently visible.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.453458" elapsed="0.000318"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>Xpath=//android.widget.Button</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.453977" elapsed="0.000168"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.454279" elapsed="0.000130"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.View[@resource-id="android:id/`item_0`"]/android.view.View[1]</arg>
+<doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.454546" elapsed="0.000146"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.View[@resource-id="android:id/`item_0`"]/android.view.View[1]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.454813" elapsed="0.000117"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.View[@resource-id="android:id/`button_connect`"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.455046" elapsed="0.000118"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.455282" elapsed="0.000120"/>
+</kw>
+<arg>Testapp025a6</arg>
+<arg>Test@123</arg>
+<status status="FAIL" start="2026-09-08T17:16:02.142405" elapsed="8.313148">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//s2.a2/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.455856" elapsed="0.000204"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.view.View[@resource-id="android:id/`button_add`"]/android.view.View</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.456317" elapsed="0.000180"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//s2.a2/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.456732" elapsed="0.000181"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Next"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.457183" elapsed="0.000218"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.Button[@resource-id="android:id/`button_message_type`"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.457646" elapsed="0.000371"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="I'll check in with you again soon!"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.458404" elapsed="0.000267"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>Xpath=//android.widget.Button[@resource-id="android:id/`button_send`"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-08T17:16:10.459047" elapsed="0.000256"/>
+</kw>
+<status status="FAIL" start="2026-09-08T17:16:02.130632" elapsed="8.329159">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</test>
+<doc>Automating Mobile App Login Scenarios</doc>
+<status status="FAIL" start="2026-09-08T17:15:59.928490" elapsed="10.542393"/>
+</suite>
+<status status="FAIL" start="2026-09-08T17:15:59.921486" elapsed="10.557046"/>
+</suite>
+<status status="FAIL" start="2026-09-08T17:15:59.712012" elapsed="10.770819"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="SpotAutomation" id="s1" pass="0" fail="1" skip="0">SpotAutomation</stat>
+<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">SpotAutomation.Tests</stat>
+<stat name="03 Message Tab" id="s1-s1-s1" pass="0" fail="1" skip="0">SpotAutomation.Tests.03 Message Tab</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-09-08T17:16:04.220091" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /session</msg>
+<msg time="2026-09-08T17:16:06.239832" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /session</msg>
+<msg time="2026-09-08T17:16:08.270533" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=4723): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /session</msg>
+<msg time="2026-09-08T17:16:10.423827" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
