@@ -40,4 +40,4 @@ Verify add the valid device details
 
 Verify that browser should be closed.
      [Tags]   TEST_CASE_51212
-    Web.Close All Browsers
+     Web.Close All Browsers
