@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.6 on win32)" generated="2026-09-10T14:48:35.265781" rpa="false" schemaversion="5">
+<suite id="s1" name="SpotAutomation" source="D:\SpotAutomation">
+<suite id="s1-s1" name="Spot-360" source="D:\SpotAutomation\Spot-360">
+<suite id="s1-s1-s1" name="Testcases" source="D:\SpotAutomation\Spot-360\Testcases">
+<suite id="s1-s1-s1-s1" name="01 Login&amp;Logout tests" source="D:\SpotAutomation\Spot-360\Testcases\01_Login&amp;Logout_tests.robot">
+<test id="s1-s1-s1-s1-t1" name="Testcase-001:Verify Successful Login With Valid Credentials" line="14">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2026-09-10T14:48:38.915249" elapsed="4.996007"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2026-09-10T14:48:44.804232" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="android:id/`input_field_username`"]</msg>
+<arg>xpath=//android.widget.EditText[@resource-id="android:id/`input_field_username`"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-10T14:48:43.911640" elapsed="0.893497"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2026-09-10T14:48:44.806213" level="INFO">Typing text 'Testapp025a6' into text field 'xpath=//android.widget.EditText[@resource-id="android:id/`input_field_username`"]'</msg>
+<msg time="2026-09-10T14:48:45.488990" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="android:id/`input_field_username`"]</msg>
+<arg>xpath=//android.widget.EditText[@resource-id="android:id/`input_field_username`"]</arg>
+<arg>Testapp025a6</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T14:48:44.805594" elapsed="0.684199"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2026-09-10T14:48:45.491061" level="INFO">Typing text 'Test@123' into text field 'xpath=//android.widget.EditText[@resource-id="android:id/`input_field_password`"]'</msg>
+<msg time="2026-09-10T14:48:45.707208" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="android:id/`input_field_password`"]</msg>
+<arg>xpath=//android.widget.EditText[@resource-id="android:id/`input_field_password`"]</arg>
+<arg>Test@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T14:48:45.490533" elapsed="0.217416"/>
+</kw>
+<kw name="Hide Keyboard" owner="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout[2]</arg>
+<doc>Hides the software keyboard on the device if it is currently visible.</doc>
+<status status="PASS" start="2026-09-10T14:48:45.709020" elapsed="0.217549"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-09-10T14:48:45.928238" level="INFO">Clicking element 'Xpath=//android.widget.Button'.</msg>
+<msg time="2026-09-10T14:48:46.659488" level="INFO">xpath criteria: //android.widget.Button</msg>
+<arg>Xpath=//android.widget.Button</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T14:48:45.927507" elapsed="0.732593"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-10T14:49:06.661849" level="INFO">Slept 20 seconds.</msg>
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-10T14:48:46.660564" elapsed="20.001735"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2026-09-10T14:49:06.762499" level="INFO">xpath criteria: //android.view.View[@resource-id="android:id/`item_0`"]/android.view.View[1]</msg>
+<arg>xpath=//android.view.View[@resource-id="android:id/`item_0`"]/android.view.View[1]</arg>
+<doc>Waits until the element specified by the ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-10T14:49:06.662883" elapsed="0.100254"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-09-10T14:49:06.764520" level="INFO">Clicking element 'xpath=//android.view.View[@resource-id="android:id/`item_0`"]/android.view.View[1]'.</msg>
+<msg time="2026-09-10T14:49:06.939032" level="INFO">xpath criteria: //android.view.View[@resource-id="android:id/`item_0`"]/android.view.View[1]</msg>
+<arg>xpath=//android.view.View[@resource-id="android:id/`item_0`"]/android.view.View[1]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T14:49:06.763785" elapsed="0.175999"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-09-10T14:49:06.942100" level="INFO">Clicking element 'xpath=//android.view.View[@resource-id="android:id/`button_connect`"]'.</msg>
+<msg time="2026-09-10T14:49:07.664147" level="INFO">xpath criteria: //android.view.View[@resource-id="android:id/`button_connect`"]</msg>
+<arg>xpath=//android.view.View[@resource-id="android:id/`button_connect`"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T14:49:06.941355" elapsed="0.723561"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="FAIL" start="2026-09-10T14:49:07.665344" elapsed="15.975307">Execution terminated by signal</status>
+</kw>
+<doc>Test Case 1: Entering correct details navigates user to dashboard.</doc>
+<status status="FAIL" start="2026-09-10T14:48:38.899118" elapsed="44.742237">Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Testcase-002: Verify Successful Signout" line="50">
+<doc>Test Case 2: Successfully signing out navigates user to login screen.</doc>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-09-10T14:49:23.651354" elapsed="0.017015">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Automating Mobile App Login Scenarios</doc>
+<status status="FAIL" start="2026-09-10T14:48:35.549334" elapsed="48.132165"/>
+</suite>
+<status status="FAIL" start="2026-09-10T14:48:35.534220" elapsed="48.152621"/>
+</suite>
+<status status="FAIL" start="2026-09-10T14:48:35.525633" elapsed="48.169310"/>
+</suite>
+<status status="FAIL" start="2026-09-10T14:48:35.293800" elapsed="48.405968"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat info="combined" combined="NOT robot:exit" pass="0" fail="1" skip="0">NOT robot:exit</stat>
+</tag>
+<suite>
+<stat name="SpotAutomation" id="s1" pass="0" fail="2" skip="0">SpotAutomation</stat>
+<stat name="Spot-360" id="s1-s1" pass="0" fail="2" skip="0">SpotAutomation.Spot-360</stat>
+<stat name="Testcases" id="s1-s1-s1" pass="0" fail="2" skip="0">SpotAutomation.Spot-360.Testcases</stat>
+<stat name="01 Login&amp;Logout tests" id="s1-s1-s1-s1" pass="0" fail="2" skip="0">SpotAutomation.Spot-360.Testcases.01 Login&amp;Logout tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
