@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-08-27T15:36:43.698494" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\Jil.Shah\Downloads\GS\Testcases\Login.robot">
+<test id="s1-t1" name="Verify that the user is able to log in with valid credentials." line="14">
+<kw name="Open findmespot On Browser" owner="Login.resources">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-08-27T15:36:44.056234" level="FAIL">Resolving variable '${https://myaccounttest.findmespot.com/login}' failed: Variable '${https}' not found.</msg>
+<arg>url=${https://myaccounttest.findmespot.com/login}</arg>
+<arg>browser=${Browser}</arg>
+<arg>options=add_experimental_option("excludeSwitches", ["enable-logging"])</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-08-27T15:36:44.055508" elapsed="0.000780">Resolving variable '${https://myaccounttest.findmespot.com/login}' failed: Variable '${https}' not found.</status>
+</kw>
+<kw name="Set Window Size" owner="Web">
+<arg>${windowScreenWidth}</arg>
+<arg>${windowScreenHigth}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" start="2026-08-27T15:36:44.056452" elapsed="0.000034"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-08-27T15:36:44.056593" elapsed="0.000029"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>${LoginButton}</arg>
+<arg>${StandardTimeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-27T15:36:44.056714" elapsed="0.000028"/>
+</kw>
+<status status="FAIL" start="2026-08-27T15:36:44.054979" elapsed="0.001872">Resolving variable '${https://myaccounttest.findmespot.com/login}' failed: Variable '${https}' not found.</status>
+</kw>
+<kw name="Click on Login button">
+<status status="NOT RUN" start="2026-08-27T15:36:44.057561" elapsed="0.000040"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>${LoginButton}</arg>
+<arg>${StandardTimeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-27T15:36:44.057780" elapsed="0.000034"/>
+</kw>
+<tag>TEST_CASE_51208</tag>
+<status status="FAIL" start="2026-08-27T15:36:44.054321" elapsed="0.003688">Resolving variable '${https://myaccounttest.findmespot.com/login}' failed: Variable '${https}' not found.</status>
+</test>
+<status status="FAIL" start="2026-08-27T15:36:43.699988" elapsed="0.358577"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">TEST_CASE_51208</stat>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="0" fail="1" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-08-27T15:36:43.968960" level="ERROR">Error in file 'C:\Users\Jil.Shah\Downloads\GS\Resources\Login.resources.robot' on line 3: Resource file 'C:UsersJil.ShahDownloadsGSLocatersQAenvlocaters.robot' does not exist.</msg>
+<msg time="2026-08-27T15:36:43.991028" level="WARN">Imported library 'poplib' contains no keywords.</msg>
+</errors>
+</robot>
