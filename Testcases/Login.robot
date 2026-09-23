@@ -13,7 +13,7 @@ Verify that the user is able to open the chrome in full screen and accept the co
     Open findmespot On Browser
     Web.Scroll Element Into View     ${Cookies}
     web.Click Button  ${Cookies}   
-    Sleep    5s
+    Sleep    30s
     web.Wait Until Element Is Visible  ${UserNameTextField}  ${StandardTimeout} 
 
 Verify that user is able to login with valid credentials and redirects to the dashboard.
@@ -22,7 +22,7 @@ Verify that user is able to login with valid credentials and redirects to the da
     web.Input Text   ${PasswordTextField}    ${Password}
     Web.Wait Until Element Is Visible   ${LoginButton}     ${StandardTimeout}
     web.Click Button   ${LoginButton}
-    Sleep   10s
+    Sleep   20s
     Web.Wait Until Element Is Visible   ${Mydevices}     ${StandardTimeout}
 
 Verify Add New Device Screen Navigation
@@ -35,8 +35,19 @@ Verify Add New Device Screen Navigation
 
 Verify add the valid device details 
     [Tags]    TEST_CASE_51211
-    Web.Wait Until Element Is Visible   ${ESN/UIDTextField}     ${StandardTimeout}
-    web.Input Text   ${ESN/UIDTextField}     ${ESN/UID} 
+    Web.Wait Until Element Is Visible   ${ESN/UIDTextField}       ${StandardTimeout}
+    Sleep   25s
+    web.Input Text       ${ESN/UIDTextField}     ${ESN/UID} 
+    Sleep  2s
+    web.Input Text       ${Auth Code}      ${Auth_Code}  
+    web.Input Text       ${DeviceName}      ${Nameofdevice}  
+    Web.Click Button     ${ClickNextButton}
+
+Verify that user is able to redirects to the plan page and select the plan
+    [Tags]    TEST_CASE_51212
+    Web.Wait Until Element Is Visible   ${ClickNextButton1}       ${StandardTimeout}
+    web.Click Button     ${ClickNextButton1}
+    sleep     10s
 
 Verify that browser should be closed.
      [Tags]   TEST_CASE_51212
