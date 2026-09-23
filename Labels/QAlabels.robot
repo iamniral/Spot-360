@@ -6,6 +6,3 @@ ${UserName}                           Amrutiya1
 ${Password}                           Test@123
 ${Delay30seconds}                     10s
 ${Delay10seconds}                     5s
-${ESN/UID}                           010-006-134-919
-${Auth_Code}                         57006735
-${Nameofdevice}                      TestDevice919
