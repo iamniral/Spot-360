@@ -42,4 +42,14 @@ ${Contact_First_name_TextField}            //android.widget.EditText[@resource-i
 ${Contact_Last_name_TextField}             //android.widget.EditText[@resource-id="android:id/`input_field_last_name`"]
 ${Contact_Phone_number_TextField}          //android.widget.EditText[@resource-id="android:id/`input_field_phone_number`"]
 ${Save_Contact_button}                     //android.widget.Button
-${contact_search_bar}                      //android.widget.EditText[@resource-id="android:id/`input_field_search`"]/android.view.View[2]
+${contact_search_bar}                      //android.widget.EditText[@resource-id="android:id/`input_field_search`"]
+${contact_search_result}                   //android.widget.TextView[@text="Ram Verma"]
+${Contact_Edit}                            //android.view.View[@resource-id="android:id/`button_edit`"]
+#${Edit_First_Name_Clear}                   //android.view.View/android.widget.EditText[@resource-id="android:id/input_field_first_name_invalid"]
+${Edit_First_Name}                         John
+${Edit_Last_Name}                          Shekhar
+${Country_Code_Dropdown}                   xpath=//*[contains(@text, "Country Code")]
+${Target_Option}                           xpath=(//android.widget.TextView[contains(@text, "+")])[1]
+#${Edit_Country_Code}                       1
+${Edit_Phone_Number}                       98765436210
+${Edit_Done}                               //android.widget.Button

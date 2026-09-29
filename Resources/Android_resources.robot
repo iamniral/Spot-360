@@ -74,4 +74,28 @@ Contact search
     Input Text       ${contact_search_bar}    ${First_Name} ${Last_Name}
 
 Contact Verification
-    Page Should Contain Text    ${First_Name}  ${Last_Name}  
+    Wait Until Element Is Visible    ${contact_search_result}    timeout=5s
+    Page Should Contain Element    ${contact_search_result}
+  
+Contact Edit
+    Click Element    ${contact_search_result} 
+    Wait Until Element Is Visible    ${Contact_Edit}
+    Click Element    ${Contact_Edit}
+    #Clear Text    ${Contact_First_name_TextField}
+    #Click Element    ${Edit_First_Name_Clear}
+    Input Text    ${Contact_First_name_TextField}    ${Edit_First_Name}
+    #Clear Text    ${Contact_Last_name_TextField}
+    #Click Element    ${Contact_Last_name_TextField}
+    Input Text    ${Contact_Last_name_TextField}     ${Edit_Last_Name}
+    #Clear Text    ${Contact_Phone_number_TextField}
+    #Click Element    ${Contact_Phone_number_TextField}
+    
+    Wait Until Element Is Visible    ${Country_Code_Dropdown}    timeout=5s
+    Click Element                    ${Country_Code_Dropdown} 
+    sleep   5s
+    Wait Until Element Is Visible    ${Target_Option}      timeout=10s
+    Click Element                    ${Target_Option}
+    #Click Element    android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("India"))
+    Input Text    ${Contact_Phone_number_TextField}  ${Edit_Phone_Number}   
+    Click Element     ${Edit_Done}
+    

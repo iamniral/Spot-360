@@ -16,4 +16,5 @@ Verify that the user is able to open to add and Serach Contact.
     Save Contact
     Contact search
     Contact Verification
+    Contact Edit
     Log To Console    message=contact added sucesfully
