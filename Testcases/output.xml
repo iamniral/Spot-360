@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-09-10T16:37:48.910108" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\Jil.Shah\Downloads\GS\Testcases\Login.robot">
+<test id="s1-t1" name="Verify that the user is able to open the chrome in full screen and accept the cookies." line="11">
+<kw name="Open findmespot On Browser" owner="Login.resources">
+<kw name="Open Browser" owner="Web">
+<msg time="2026-09-10T16:37:49.275729" level="INFO">Opening browser 'chrome' to base url 'https://myaccounttest.findmespot.com/login'.</msg>
+<arg>https://myaccounttest.findmespot.com/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-10T16:37:49.275282" elapsed="5.792565"/>
+</kw>
+<kw name="Set Window Size" owner="Web">
+<arg>${windowScreenWidth}</arg>
+<arg>${windowScreenHighth}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-09-10T16:37:55.068071" elapsed="0.385673"/>
+</kw>
+<kw name="Maximize Browser Window" owner="Web">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-09-10T16:37:55.453949" elapsed="0.035087"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>${LoginButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-10T16:37:55.489213" elapsed="2.976319"/>
+</kw>
+<status status="PASS" start="2026-09-10T16:37:49.274465" elapsed="9.191191"/>
+</kw>
+<kw name="Scroll Element Into View" owner="Web">
+<arg>${Cookies}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-09-10T16:37:58.465900" elapsed="0.287197"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-09-10T16:37:58.753959" level="INFO">Clicking button 'xpath://button[contains(text(), 'Accept') or contains(text(), 'Agree') or contains(text(), 'Allow')] '.</msg>
+<arg>${Cookies}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T16:37:58.753547" elapsed="0.061325"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-10T16:38:28.816673" level="INFO">Slept 30 seconds.</msg>
+<arg>30s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-10T16:37:58.815619" elapsed="30.001246"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>${UserNameTextField}</arg>
+<arg>${StandardTimeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-10T16:38:28.817420" elapsed="0.026469"/>
+</kw>
+<tag>TEST_CASE_51208</tag>
+<status status="PASS" start="2026-09-10T16:37:49.273373" elapsed="39.570858"/>
+</test>
+<test id="s1-t2" name="Verify that user is able to login with valid credentials and redirects to the dashboard." line="19">
+<kw name="Input Text" owner="Web">
+<msg time="2026-09-10T16:38:28.845735" level="INFO">Typing text 'Amrutiya1' into text field '//*[@placeholder="Username"]'.</msg>
+<arg>${UserNameTextField}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T16:38:28.845478" elapsed="0.076941"/>
+</kw>
+<kw name="Input Text" owner="Web">
+<msg time="2026-09-10T16:38:28.922963" level="INFO">Typing text 'Test@123' into text field '//*[@placeholder="Password"]'.</msg>
+<arg>${PasswordTextField}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T16:38:28.922690" elapsed="0.058307"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>${LoginButton}</arg>
+<arg>${StandardTimeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-10T16:38:28.981289" elapsed="0.011707"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-09-10T16:38:28.993529" level="INFO">Clicking button '//*[@id="top-element"]/div/main/app-login/div/div[3]/div[1]/form/div[2]/spotma-button/button'.</msg>
+<arg>${LoginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T16:38:28.993271" elapsed="0.056039"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-10T16:38:49.050290" level="INFO">Slept 20 seconds.</msg>
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-10T16:38:29.049567" elapsed="20.000843"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>${Mydevices}</arg>
+<arg>${StandardTimeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-10T16:38:49.050773" elapsed="0.017017"/>
+</kw>
+<tag>TEST_CASE_51209</tag>
+<status status="PASS" start="2026-09-10T16:38:28.844903" elapsed="20.223188"/>
+</test>
+<test id="s1-t3" name="Verify Add New Device Screen Navigation" line="28">
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>${Mydevices}</arg>
+<arg>${StandardTimeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-10T16:38:49.068885" elapsed="0.013152"/>
+</kw>
+<kw name="Click Element" owner="Web">
+<msg time="2026-09-10T16:38:49.082630" level="INFO">Clicking element '//span[text()=" MY DEVICES "]'.</msg>
+<arg>${Mydevices}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T16:38:49.082381" elapsed="0.047724"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>${Addnewspotdevice}</arg>
+<arg>${StandardTimeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-10T16:38:49.130417" elapsed="2.397645"/>
+</kw>
+<kw name="Click Element" owner="Web">
+<msg time="2026-09-10T16:38:51.528554" level="INFO">Clicking element '//a[text()=" Add New SPOT Device"]'.</msg>
+<arg>${Addnewspotdevice}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T16:38:51.528315" elapsed="0.044872"/>
+</kw>
+<tag>TEST_CASE_51210</tag>
+<status status="PASS" start="2026-09-10T16:38:49.068526" elapsed="2.504913"/>
+</test>
+<test id="s1-t4" name="Verify add the valid device details" line="36">
+<kw name="Wait Until Element Is Visible" owner="Web">
+<arg>${ESN/UIDTextField}</arg>
+<arg>${StandardTimeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-10T16:38:51.574221" elapsed="3.583172"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-10T16:39:20.158584" level="INFO">Slept 25 seconds.</msg>
+<arg>25s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-10T16:38:55.157661" elapsed="25.001034"/>
+</kw>
+<kw name="Input Text" owner="Web">
+<msg time="2026-09-10T16:39:20.159342" level="INFO">Typing text '010-006-134-919' into text field '//input[@data-test="deviceId"]'.</msg>
+<arg>${ESN/UIDTextField}</arg>
+<arg>${ESN/UID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T16:39:20.159019" elapsed="0.074419"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-10T16:39:22.234882" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-10T16:39:20.233837" elapsed="2.001153"/>
+</kw>
+<kw name="Input Text" owner="Web">
+<msg time="2026-09-10T16:39:22.235801" level="INFO">Typing text '//input[@data-test="authCode"]' into text field '//input[@data-test="authCode"]'.</msg>
+<arg>${Auth Code}</arg>
+<arg>${Auth_Code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T16:39:22.235338" elapsed="0.089261"/>
+</kw>
+<kw name="Input Text" owner="Web">
+<msg time="2026-09-10T16:39:22.325236" level="INFO">Typing text 'TestDevice919' into text field '//input[@data-test="deviceName"]'.</msg>
+<arg>${DeviceName}</arg>
+<arg>${Nameofdevice}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T16:39:22.324947" elapsed="0.069039"/>
+</kw>
+<kw name="Click Button" owner="Web">
+<msg time="2026-09-10T16:39:22.394520" level="INFO">Clicking button '//*[@id="top-element"]/div/main/app-add-new-device/spotma-add-device/div/div[2]/form/div[2]/spotma-button[2]/button'.</msg>
+<arg>${ClickNextButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-10T16:39:22.394266" elapsed="0.056151"/>
+</kw>
+<tag>TEST_CASE_51211</tag>
+<status status="PASS" start="2026-09-10T16:38:51.573852" elapsed="30.876812"/>
+</test>
+<test id="s1-t5" name="Verify that user is able to redirects to the plan page and select the plan" line="46">
+<kw name="Wait Until Element Is Visible" owner="Web">
+<kw name="Capture Page Screenshot" owner="Web">
+<msg time="2026-09-10T16:39:52.661985" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-98.png"&gt;&lt;img src="selenium-screenshot-98.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-10T16:39:52.551566" elapsed="0.110516"/>
+</kw>
+<msg time="2026-09-10T16:39:52.662245" level="FAIL">Element '//*[@id="top-element"]/html/body/app-component/div/div/main/app-add-new-device/app-select-plan/div/div[4]/spotma-button[2]/button' not visible after 30 seconds.</msg>
+<arg>${ClickNextButton1}</arg>
+<arg>${StandardTimeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-09-10T16:39:22.451746" elapsed="30.215497">Element '//*[@id="top-element"]/html/body/app-component/div/div/main/app-add-new-device/app-select-plan/div/div[4]/spotma-button[2]/button' not visible after 30 seconds.</status>
+</kw>
+<kw name="Click Button" owner="Web">
+<arg>${ClickNextButton1}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-10T16:39:52.667533" elapsed="0.000041"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-09-10T16:39:52.667812" elapsed="0.000052"/>
+</kw>
+<tag>TEST_CASE_51212</tag>
+<status status="FAIL" start="2026-09-10T16:39:22.451178" elapsed="30.217159">Element '//*[@id="top-element"]/html/body/app-component/div/div/main/app-add-new-device/app-select-plan/div/div[4]/spotma-button[2]/button' not visible after 30 seconds.</status>
+</test>
+<test id="s1-t6" name="Verify that browser should be closed." line="52">
+<kw name="Close All Browsers" owner="Web">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-09-10T16:39:52.669495" elapsed="2.308467"/>
+</kw>
+<tag>TEST_CASE_51212</tag>
+<status status="PASS" start="2026-09-10T16:39:52.669067" elapsed="2.309195"/>
+</test>
+<status status="FAIL" start="2026-09-10T16:37:48.911933" elapsed="126.067082"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TEST_CASE_51208</stat>
+<stat pass="1" fail="0" skip="0">TEST_CASE_51209</stat>
+<stat pass="1" fail="0" skip="0">TEST_CASE_51210</stat>
+<stat pass="1" fail="0" skip="0">TEST_CASE_51211</stat>
+<stat pass="1" fail="1" skip="0">TEST_CASE_51212</stat>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="5" fail="1" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
