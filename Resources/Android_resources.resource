@@ -1,8 +1,8 @@
 *** Settings ***
 Library        AppiumLibrary
-Resource       ../Locaters/QAenvlocaters.robot
-Resource    ../Labels/QAlabels.robot
-Resource       ../Resources/App_config.resource
+Resource       ../Locators/Android_Locators.resource
+Resource    ../Locators/Labels.resource
+Resource       ../Config/Android_config.resource
 
 
 *** Keywords ***

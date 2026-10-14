@@ -1,8 +1,8 @@
 *** Settings ***
 Library        SeleniumLibrary
-Resource       ../Locaters/QAenvlocaters.robot
-Resource       ../Resources/Login.resources.robot
-Resource       ../Labels/QAlabels.robot
+Resource       ../Locators/Web_Locators.resource
+Resource       ../Resources/Web_resources.resource
+Resource       ../Locators/Labels.resource
 Library        DateTime
 
 #Suite Teardown   UserManagementResources.Teardown Reset user permission

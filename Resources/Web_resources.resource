@@ -1,7 +1,7 @@
 *** Settings ***
 Library        SeleniumLibrary    run_on_failure=Web.Capture Page Screenshot    WITH NAME    Web
-Resource       ../Locaters/QAenvlocaters.robot
-Resource       ../Labels/QAlabels.robot
+Resource       ../Locators/Web_Locators.resource
+Resource       ../Locators/Labels.resource
 
 *** Variables ***
 ${windowScreenWidth}     1920

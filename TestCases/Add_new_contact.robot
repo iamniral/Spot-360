@@ -1,8 +1,8 @@
 *** Settings ***
 Library        AppiumLibrary
-Resource       ../Locaters/QAenvlocaters.robot
-Resource       ../Resources/Android_resources.robot
-Resource       ../Labels/QAlabels.robot
+Resource       ../Locators/Android_Locators.resource
+Resource       ../Resources/Android_resources.resource
+Resource       ../Locators/Labels.resource
 Library        DateTime
 
 #Suite Teardown   UserManagementResources.Teardown Reset user permission
